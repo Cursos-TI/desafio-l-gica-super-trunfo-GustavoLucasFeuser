@@ -113,8 +113,92 @@ int main() {
     printf("A PIB per Capita da segunda cidade %s é de %.2f\n", nomecidade2, PIBcapita2);
     printf("O super poder da segunda cidade %s é de %.2f\n", nomecidade2, Superpoder2);
 
+  // Menu para escolher o atributo de comparação
 
-    // Comparação de Cartas:
+
+    int escolha;
+    printf("\nEscolha o atributo para comparar:\n");
+    printf("1 - Populacao\n");
+    printf("2 - Area\n");
+    printf("3 - PIB\n");
+    printf("4 - Densidade Populacional\n");
+    printf("5 - PIB per Capita\n");
+    printf("6 - Numero de Pontos Turisticos\n");
+    printf("0 - Encerrar programa\n");
+    printf("Digite sua escolha: ");
+    scanf("%d", &escolha);
+
+
+        while (1) {  // Loop infinito, vai continuar até encontrar um break
+    printf("\nEscolha o atributo para comparar (0 para sair): ");
+    scanf("%d", &escolha);
+
+    if (escolha == 0) {
+        break;  
+    }
+
+    switch (escolha) {
+        case 1:
+            if (populacao1 > populacao2) {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade1);
+            } else {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade2);
+            }
+            break;
+        
+        case 2:
+            if (area1 > area2) {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade1);
+            } else {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade2);
+            }
+            break;
+        
+        case 3:
+            if (PIB1 > PIB2) {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade1);
+            } else {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade2);
+            }
+            break;
+        
+        case 4:
+            if (densidade1 < densidade2) {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade1);
+            } else {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade2);
+            }
+            break;
+        
+        case 5:
+            if (PIBcapita1 > PIBcapita2) {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade1);
+            } else {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade2);
+            }
+            break;
+        
+        case 6:
+            if (numpontosturisticos1 > numpontosturisticos2) {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade1);
+            } else {
+                printf("Nesse quesito, a cidade %s é vencedora", nomecidade2);
+            }
+            break;
+        
+        default:
+            printf("Opção inválida, tente novamente.\n");
+            break;
+    }
+}
+
+            
+        
+
+
+    // Comparação de Cartas antigo, vou comentar para o menu:
+
+    /*
    
    if(densidade1 < densidade2) {
     printf("A cidade vencedora é %s, pois tem densidade populacional menor", nomecidade1);
@@ -126,7 +210,8 @@ int main() {
         } else{
     printf("A cidade vencedora é %s, pois tem densidade populacional menor", nomecidade2);
    }
-    }
+    } */
+    
    
    
 
